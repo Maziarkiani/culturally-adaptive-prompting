@@ -1,9 +1,7 @@
 # Win analysis for rationale quality across all conditions, models, and languages.
 # Computes BERTScore-based detection and quality advantage of M1 and A1 over B1.
 # See thesis Chapter 6, Section 6.5 for full description of the analysis methodology.
-#
 # Requirements: pip install pandas numpy evaluate
-# Set BASE_DIR to the folder containing your pipeline result CSVs before running.
 
 import os
 import ast
