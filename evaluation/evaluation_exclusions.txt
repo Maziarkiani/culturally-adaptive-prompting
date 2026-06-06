@@ -2,8 +2,9 @@
 # Items excluded from metric computation due to pipeline errors across all 16 conditions.
 # Error types: FORMAT_ERROR (malformed or missing model output), API_ERROR (provider failure),
 # SKIPPED_DUE_TO_SPANS_ERROR (rationale skipped because span step already failed).
-# For Italian Maverick B0 and A1, all rationale-level exclusions reflect model content refusal at the rationale generation step. A separate diagnostic run confirmed these were not infrastructure failures. Earlier pipeline runs recorded them inconsistently as FORMAT_ERROR.
+# For Italian Maverick B0 and A1, all rationale-level exclusions reflect model content refusal at the rationale generation step. A separate diagnostic run confirmed these were not infrastructure failures. Earlier pipeline runs recorded them inconsistently as API_ERROR or FORMAT_ERROR depending on the run; both refer to the same  behavior and are unified here as FORMAT_ERROR for clarity.
 # See thesis Chapter 6, Section 6.4 and chapter 7, section 7.2.2 for full documentation of the refusal finding.
+# Errors in Farsi and other Italian setups are not content refusal behavior. This is confirmed by an item-by-item human analysis.
 
 Farsi - Maverick | B0 (Zero-Shot)
   total excluded: 0
