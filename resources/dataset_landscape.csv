@@ -1,0 +1,109 @@
+Dataset,Modality,Language,Labeled?,Has Spans?,Has Rationales?,Includes True News?,Year,Accesibility,Link
+fake-and-real-news-dataset,Text,English,Labeled,No,No,Yes,Not specified,Public,https://www.kaggle.com/datasets/clmentbisaillon/fake-and-real-news-dataset/data
+Fake-News-dataset,Text,English,Labeled,No,No,Yes,Not specified,Public,https://www.kaggle.com/datasets/abaghyangor/fake-news-dataset
+Fake News Classification,Text,English,Labeled,No,No,Yes,2018,Public,https://www.kaggle.com/datasets/saurabhshahane/fake-news-classification
+NELLA-GT-2022,Text,English,Labeled,No,No,Yes,2021,Public,https://github.com/MELALab/nela-gt
+NELLA-GT-2019,Text,English,Labeled,No,No,Yes,2020,Public,https://github.com/mgruppi/nela-gt-2019
+Twitter 15 Rumor,Text,English,Labeled,No,No,Yes,2017,Public,https://www.kaggle.com/datasets/syntheticprogrammer/rumor-detection-acl-2017
+Twitter 16 Rumor,Text,English,Labeled,No,No,Yes,2017,Public,https://www.kaggle.com/datasets/syntheticprogrammer/rumor-detection-acl-2017
+Weibo Rumor,Multimodal,Chinese,Labeled,No,No,Yes,2017,Public,https://github.com/wangzhuang1911/Weibo-dataset & https://www.scidb.cn/en/detail?dataSetId=62de6a26df7b4f959b0773666fcc8ae6
+LIAR,Text,English,Labeled,No,No,Yes,2017,Public,https://github.com/tfs4/liar_dataset
+Covid 19 FN,Text,English,Labeled,No,No,Yes,2020,Public,https://www.kaggle.com/datasets/arashnic/covid19-fake-news
+Fake or Real news,Text,English,Labeled,No,No,Yes,Not specified,Public,https://www.kaggle.com/datasets/jillanisofttech/fake-or-real-news
+ISOT,Text,English,Labeled,No,No,Yes,2017 - 2018,Public,https://www.kaggle.com/datasets/csmalarkodi/isot-fake-news-dataset and https://onlineacademiccommunity.uvic.ca/isot/2022/11/27/fake-news-detection-datasets/
+Getting-real-about-fake-news,Text,English,Not labeled,No,No,No,2016,Public,https://www.kaggle.com/datasets/mrisdal/fake-news
+Notre-Dame-Fire,Text,English,Labeled,No,No,Yes,2022,Public,https://github.com/Unipisa/NDFDataset
+FANG,Text,English,Labeled,No,No,Yes,2020,Public,https://github.com/nguyenvanhoang7398/FANG
+Covid 19 China,Text,Chinese,Labeled,No,No,Yes,2021,Public,https://github.com/cyang03/CHECKED
+BAAI - Biendata 2019,Text,Chinese,Labeled,No,No,Yes,2019 - 2020,Public,https://github.com/SmallZzz/FakeNewsData
+Fake News Detection Project,Text,English,Labeled,No,No,Yes,Not Specified,Public,https://github.com/kapilsinghnegi/Fake-News-Detection
+MuMin,Text,Multilingual - 41 Langs,Labeled,No,No,Yes,2022,Public,https://mumin-dataset.github.io/ & https://github.com/MuMiN-dataset/mumin-build & https://data.bris.ac.uk/data/dataset/23yv276we2mll25fjakkfim2ml
+Fakenews,Text,English,Not labeled,No,No,No,2018,Public,https://github.com/jgolbeck/fakenews
+FakeNewsNet,Text,English,Labeled,No,No,Yes,2017,Public,https://github.com/KaiDMML/FakeNewsNet
+CredBank,Text,English,Labeled,No,Yes,Yes,2015,Public,https://github.com/compsocial/CREDBANK-data
+Unreliable News,Text,English,Labeled,No,No,Yes,2017,Public,https://hrashkin.github.io/factcheck.html
+MacIntire,Text,English,Labeled,No,No,Yes,2017,Public,https://github.com/GeorgeMcIntire/fake_real_news_dataset
+PHEME (9 Events / 2018),Text,"English, German, French",Labeled,No,No,Yes,2016 - 2018,Public,https://www.kaggle.com/datasets/usharengaraju/pheme-dataset & https://figshare.com/articles/dataset/PHEME_dataset_for_Rumour_Detection_and_Veracity_Classification/6392078
+Pheme Rumor,Text,"English, German",Labeled,No,No,Yes,2016 - 2018,Public,https://www.kaggle.com/datasets/nicolemichelle/pheme-dataset-for-rumour-detection
+CoAid,Text,English,Labeled,No,No,Yes,2020,Public,https://github.com/cuilimeng/CoAID
+Signal 1 Media,Text,"Multilingual, mainly English",Not labeled,No,No,Yes,2016,Private,"https://github.com/signal-ai/Signal-1M-Tools, https://research.signal-ai.com/newsir16/signal-dataset.html"
+FKTC ,Text,"Portuguese, English",Labeled,No,No,Yes,2021,Public,https://github.com/GoloMarcos/FKTC
+WNUT Covid,Text,English,Labeled,No,No,Yes,2020,Public,https://github.com/VinAIResearch/COVID19Tweet
+Covid 19 Rumor data,Text,"English, Chinese",Labeled,No,No,Yes,2021,Public,https://github.com/MickeysClubhouse/COVID-19-rumor-dataset
+LIAR PLUS,Text,English,Labeled,No,Yes,Yes,2018,Public,https://github.com/Tariq60/LIAR-PLUS
+BuzzFeed-Webis Fake News Corpus 16,Text,English,Labeled,No,No,Yes,2018,Public,https://webis.de/data/buzzfeed-webis-fake-news-16.html#synopsis
+Hyperpartisan news detection,Text,English,Labeled,No,No,Yes,2019,Public,https://github.com/zliucr/hyperpartisan-news-detection & https://zenodo.org/records/1489920 & https://zenodo.org/records/5776081
+Rumor Eval (Pheme + Reddit),Text,English,Labeled,No,No,Yes,2019,Public,https://github.com/kippfreud/RumourEval
+SemEval 2016 Task 6,Text,English,Labeled,No,No,Yes,2016,Public,https://afshinrahimi.github.io/semeval2016-task6/
+YelpZip,Text,English,Labeled,No,No,Yes,2015,Public,https://www.kaggle.com/datasets/yelp-dataset/yelp-dataset/data
+WSDM - Fake News Classification,Text,"English, Chinese",Labeled,No,No,Yes,2019,Public,https://www.kaggle.com/c/fake-news-pair-classification-challenge/data
+Fake News Detection Dataset,Text,English,Labeled,No,No,Yes,Not Specified,Public,https://www.kaggle.com/datasets/mahdimashayekhi/fake-news-detection-dataset
+Fake News Prediction Dataset,Text,English,Labeled,No,No,Yes,Not Specified,Public,https://www.kaggle.com/datasets/rajatkumar30/fake-news
+Fake News data set,Text,English,Labeled,No,No,Yes,Not Specified,Public,https://www.kaggle.com/datasets/bjoernjostein/fake-news-data-set & https://www.aicrowd.com/challenges/kiit-ai-mini-blitz/problems/fake-news-detection
+Misinformation & Fake News text dataset 79k,Text,English,Labeled,No,No,Yes,Not Specified,Public,https://www.kaggle.com/datasets/stevenpeutz/misinformation-fake-news-text-dataset-79k
+AFND,Text,Arabic,Labeled,No,No,Yes,2022,Public,https://www.kaggle.com/datasets/murtadhayaseen/arabic-fake-news-dataset-afnd
+Wel Fake,Text,English,Labeled,No,No,Yes,Not Specified,Public,https://www.kaggle.com/datasets/syedsubahani/wel-fake-news-dataset
+Jruvika Fake News Detection,Text,English,Labeled,No,No,Yes,Not Specified,Public,https://www.kaggle.com/datasets/jruvika/fake-news-detection
+Fake news Dataset,Text,English,Labeled,No,No,Yes,Not Specified,Public,https://www.kaggle.com/datasets/mohamadalhasan/a-fake-news-dataset-around-the-syrian-war
+Rumor Eval 19,Text,English,Labeled,No,No,Yes,2019,Public,https://figshare.com/articles/dataset/RumourEval_2019_data/8845580?file=16188500
+CLEF eHealth dataset,"Text, Audio",English,Labeled,No,No,Yes,2020,Public,https://clefehealth.imag.fr/clefehealth.imag.fr/index49be.html?page_id=215
+Fake br Corpus,Text,Portugese,Unlabeled,No,No,Yes,2018,Public,https://github.com/roneysco/Fake.br-Corpus
+Fake News Corpus,Text,English,Labeled,No,No,Yes,2018,Public,https://github.com/several27/FakeNewsCorpus
+Fakeddit,"Text, Image",English,Labeled,No,No,Yes,2019,Public,https://fakeddit.netlify.app/
+CASIA 2.0,Image,-,Labeled,Yes,No,Yes,2013,Public,https://www.kaggle.com/datasets/divg07/casia-20-image-tampering-detection-dataset
+Handcrafted Facial Manupulation ,Image,-,Labeled,No,No,Yes,2020,Public,https://data.mendeley.com/datasets/h4ymvy9g8j/1
+Real and Fake Face detection,Image,-,Labeled,Yes,No,Yes,2019,Public,https://www.kaggle.com/datasets/ciplab/real-and-fake-face-detection
+140K Real vs Fake,Image,-,Labeled,No,No,Yes,Not Specified,Public,https://www.kaggle.com/datasets/xhlulu/140k-real-and-fake-faces
+Fake News Detection,Text,English,Labeled,No,No,Yes,2019,Public,https://github.com/fakenewssyria/fake_news_detection
+Deceptive Opinion Spam Corpus,Text,English,Labeled,No,No,Yes,2011,Public,https://www.kaggle.com/datasets/rtatman/deceptive-opinion-spam-corpus
+Yelp CE,Text,English,Labeled,No,No,Yes,2019,Private,Request by email to o.araque@upm.es
+Pheme FP7 Project,Text,"English, German",Labeled,No,No,Yes,2016,Public,https://figshare.com/articles/dataset/PHEME_rumour_scheme_dataset_journalism_use_case/2068650/2?file=4988998
+BuzzFace,"Text, Social Context",English,Labeled,No,No,Yes,2018,Public,https://github.com/gsantia/BuzzFace
+Facebook Hoax,"Text, Social Graph","English, Italian",Labeled,No,No,Yes,2017,Public,https://github.com/gabll/some-like-it-hoax
+FEVER 1,Text,English,Labeled,Yes,No,No,2018,Public,https://fever.ai/resources.html
+FEVER 2,Text,English,Labeled,Yes,No,No,2019,Public,https://fever.ai/resources.html
+FEVEROUS,Text,English,Labeled,Yes,No,No,2021,Public,https://fever.ai/resources.html
+Emergent,Text,English,Labeled,No,No,Yes,2016,Public,https://github.com/willferreira/mscproject
+Benjamin Political News Dataset,Text,English,Labeled,No,No,Yes,2017,Public,https://github.com/rpitrust/fakenewsdata1
+Burfoot Satire News Dataset,Text,English,Labeled,No,No,Yes,2016,Public,https://github.com/rfong/satire/tree/master/corpus
+MisInfoText dataset,Text,English,Labeled,No,No,Yes,2019,Public,https://github.com/sfu-discourse-lab/MisInfoText
+FNC-1 dataset,Text,English,Labeled,No,No,Yes,2017,Public,https://github.com/uclnlp/fakenewschallenge
+TSHP-17,Text,English,Labeled,No,No,Yes,2017,Public,https://homes.cs.washington.edu/~hrashkin/factcheck.html
+FCV 2018,"Video, metadata",Multilingual,Labeled,No,No,Yes,2018,Public,https://mklab.iti.gr/results/fake-video-corpus/
+Verification Corpus,"Text, Image",English,Labeled,No,No,Yes,2018,Public,github.com/MKLab-ITI/image-verification-corpus
+Zheng et al. (CBCNN),Text,Chinese,Labeled,No,No,Yes,2018,Public,https://github.com/chenjinyuan87/cbcnn
+Tam et al. (Rumor Detection),Text,English,Labeled,No,No,Yes,2019,Public,http://tiny.cc/p1s2qy
+FakeHealth,"Text, social context",English,Labeled,No,Yes,Yes,2020,Public,https://github.com/EnyanDai/FakeHealth?
+Fake News AMT,Text,English,Labeled,No,No,Yes,2018,Public,https://www.kaggle.com/datasets/sumanthvrao/fakenewsdataset
+Multisource Fake,Text,English,Labeled,No,No,Yes,2021,Public,https://github.com/bilalghanem/fake_flow
+Political News,Text,English,Labeled,No,No,Yes,2019,Public,https://osf.io/ez5q4/overview
+Health and Well-being Fake News Dataset (HWB),Text,English,Labeled,No,No,Yes,2020,Private,https://dcs.uoc.ac.in/cida/resources/hwb.html
+MultiFC,Text,English,Labeled,No,Yes,Yes,2019,Public,https://competitions.codalab.org/competitions/21163
+RawFC,Text,English,Labeled,No,Yes,Yes,2022,Public,https://github.com/Nicozwy/CofCED
+Infodemic Dataset Covid 19,Text,English,Labeled,No,No,Yes,2021,Public,https://github.com/parthpatwa/covid19-fake-news-detection
+MediaEval2016,"Text, image",English,Labeled,No,No,Yes,2016,Public,https://github.com/MKLab-ITI/image-verification-corpus/tree/master/mediaeval2016
+MMM,"Text, image","Hindi, Bengali, Tamli, English, Malayalam",Labeled,No,No,Yes,2022,Public,https://github.com/vipingupta1907/MVEN
+Weibo21,"Text, image, social context",Chinese,Labeled,No,No,Yes,2021,Public,https://github.com/kennqiang/MDFEND-Weibo21
+WWW21,"Text, social emotion",Chinese,Labeled,No,No,Yes,2021,Public,https://github.com/RMSnow/WWW2021
+BanFakeNews,Text,Bangali,Labeled,No,No,Yes,2020,Public,https://github.com/Rowan1224/FakeNews
+MiDe22,Text,"English, Turkish",Labeled,No,No,Yes,2024,Public,https://github.com/ogozcelik/MiDe22
+Pagella Politica,Text,Italian,Labeled,No,Yes,Yes,2020,Private,https://www.ifo.de/DocDL/cesifo1_wp10122.pdf
+FactA (EVALITA 2016),Text,Italian,Labeled,Yes,No,Yes,2016,Public,https://github.com/alminard/FactA_evaluation
+MULTI-Fake-DetectiVE,"Text, visuals",Italian,Labeled,No,No,Yes,2024,Public,https://data.mendeley.com/datasets/s3mfjxcg68/1
+IRMA (Italian coRpus of MisinformAtion),Text,Italian,Labeled,No,No,Yes,2023,Public,https://osf.io/rywp4/overview
+CheckIT!,Text,Italian,Labeled,No,Yes,Yes,2023,Public,https://github.com/Jj-source/Check-It
+FEVER - IT,"Text, claim + evidence",Italian,Labeled,No,Yes,Yes,2024,Public,https://github.com/crux82/FEVER-it
+Italian Twitter Disino 2019 Election,"Text, graph",Italian,Labeled,No,No,Yes,2020,Public,https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/OQHLAJ
+ParsFEVER,Text,Farsi,Labeled,No,Yes,Yes,2021,Public,https://github.com/Zarharan/ParsFEVER
+Persian COVID-19,Text,Farsi,Labeled,No,No,Yes,2024,Public,https://aclanthology.org/2023.paclic-1.44.pdf
+TAJ Dataset,Text,Farsi,Labeled,No,No,Yes,2021,Public,https://dl.acm.org/doi/10.1145/3472620
+Persian Corona Fake News,Text,Farsi,Labeled,No,No,Yes,2022,Public,https://www.kaggle.com/datasets/omidsakaki1370/persian-fake-corona-news/data and https://onlinelibrary.wiley.com/doi/abs/10.1111/exsy.13008
+Persian Stance Detection,Text,Farsi,Labeled,No,No,Yes,2020,Public,https://github.com/Zarharan/PersianStanceDetection
+Covid Persian Instagram Misinformation,Text,Farsi,Labeled,No,No,Yes,2025,Public,https://pmc.ncbi.nlm.nih.gov/articles/PMC12668897/
+Persian Fake News Dataset (Khodarahimi),Text,Farsi,Labeled,No,No,Yes,Not Specified,Public,https://www.kaggle.com/datasets/mahdikhodarahimi/persian-fake-news-dataset
+RUWA,Text,Russian,Labeled,No,No,Yes,2023,Public,https://cris.unibo.it/handle/11585/975217?mode=complete & https://github.com/ninakhairova/dataset_RUWA
+Fakespeak-RUS,Text,Russian,Labeled,No,Yes,Yes,2025,Public,https://www.researchgate.net/publication/394090726_Fakespeak-RUS_building_a_corpus_of_Russian_fake_news
+RusFacts,Text,Russian,Labeled,Yes,No,Yes,2023,Public,https://huggingface.co/datasets/akozlova/RuFacts
+EUvsDisinfo,Multimodal,Russian,Labeled,No,No,Yes,2024,Public,https://eprints.whiterose.ac.uk/id/eprint/219537/
+Russian Fakenews Dataset (Sakharov),Text,Russian,Labeled,No,No,Yes,Not Specified,Public,https://www.kaggle.com/datasets/danyasakharov/russian-fakenews-dataset
+RuFakeNews (Kuzmin et al.),Text,Russian,Labeled,No,No,Yes,2020,Public,https://aclanthology.org/2020.rdsm-1.5/
