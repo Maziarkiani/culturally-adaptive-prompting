@@ -73,7 +73,7 @@ pip install -r requirements.txt
 
 ### Input Data
 
-This framework is built on the [InDor corpus]([https://github.com/dhfbk/InDor](https://lrec.elra.info/lrec2026-main-515)). You will need the raw Italian and Farsi JSONL files (`indor_it.jsonl`, `indor_fa.jsonl`). Place them in a `data/` folder before running the cleaning pipeline.
+This framework is built on the [InDor corpus](https://lrec.elra.info/lrec2026-main-515). You will need the raw Italian and Farsi JSONL files (`indor_it.jsonl`, `indor_fa.jsonl`). Place them in a `data/` folder before running the cleaning pipeline.
 
 Pipeline result raw CSVs and human evaluation form responses are not included in this repository. See the README files in each folder for the expected file naming convention.
 
