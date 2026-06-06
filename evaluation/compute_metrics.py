@@ -12,8 +12,8 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from sklearn.metrics import f1_score
 
-BASE_DIR   = './results'   # folder containing the pipeline output CSVs
-OUTPUT_DIR = './output'    # folder where the figure will be saved
+BASE_DIR   = './results'
+OUTPUT_DIR = './output'
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 # registry of all 16 conditions (4 setups x 2 models x 2 languages)
