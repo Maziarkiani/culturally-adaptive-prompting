@@ -134,7 +134,7 @@ If you use this framework, the dataset landscape sheet, or the evaluation method
   archivePrefix = {arXiv},
   primaryClass  = {cs.CL},
   url           = {https://arxiv.org/abs/2603.27356},
-  note          = {Presented at the InDor26 Workshop, LREC-COLING 2026}
+  note          = {Presented at the InDor26 Workshop, LREC 2026}
 }
 ```
 
