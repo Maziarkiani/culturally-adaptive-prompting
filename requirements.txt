@@ -1,0 +1,21 @@
+# core data and ML
+pandas
+numpy
+scikit-learn
+
+# language detection (used in cleaning pipeline)
+langdetect
+
+# retrieval and embeddings
+sentence-transformers
+
+# evaluation metrics
+evaluate
+bert-score
+
+# pipeline and API
+requests
+
+# visualization
+matplotlib
+seaborn
