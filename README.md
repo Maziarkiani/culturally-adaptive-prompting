@@ -42,7 +42,7 @@ culturally-adaptive-prompting/
 │   └── build_bge_m3_index.py  # encodes the exemplar bank using BGE-M3
 │
 ├── evaluation/              # automated metric computation and win analysis
-│   ├── compute_metrics.py     # severity F1, span overlap F1, BERTScore
+│   ├── compute_metrics.py     # severity F1, token overlap F1, BERTScore
 │   ├── win_analysis.py        # rationale-level win/loss analysis across conditions
 │   └── evaluation_exclusions.txt  # log of items excluded from evaluation
 │
