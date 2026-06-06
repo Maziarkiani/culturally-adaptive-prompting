@@ -1,0 +1,181 @@
+# Evaluation exclusions log
+# Items excluded from metric computation due to pipeline errors across all 16 conditions.
+# Error types: API_ERROR (provider failure), FORMAT_ERROR (malformed output),
+# EMPTY_RESPONSE / SAFETY_REFUSAL (model refused to generate), SKIPPED_DUE_TO_SPANS_ERROR
+# (rationale skipped because span step already failed).
+# See thesis Chapter 6, Section 6.2 for description of the exclusion methodology.
+
+Farsi - Maverick | B0 (Zero-Shot)
+  total excluded: 0
+
+Farsi - Mixtral | B0 (Zero-Shot)
+  total excluded: 1
+  text_id: 9781   | severity: API_ERROR
+
+Farsi - Maverick | B1 (Static)
+  total excluded: 0
+
+Farsi - Mixtral | B1 (Static)
+  total excluded: 10
+  text_id: 9763   | rationales: FORMAT_ERROR
+  text_id: 9796   | rationales: FORMAT_ERROR
+  text_id: 9896   | spans: API_ERROR | rationales: SKIPPED_DUE_TO_SPANS_ERROR
+  text_id: 10004  | severity: API_ERROR
+  text_id: 10105  | spans: FORMAT_ERROR | rationales: SKIPPED_DUE_TO_SPANS_ERROR
+  text_id: 10189  | spans: API_ERROR | rationales: SKIPPED_DUE_TO_SPANS_ERROR
+  text_id: 10191  | severity: API_ERROR
+  text_id: 10249  | severity: API_ERROR | rationales: FORMAT_ERROR
+  text_id: 10330  | severity: API_ERROR | spans: FORMAT_ERROR | rationales: SKIPPED_DUE_TO_SPANS_ERROR
+  text_id: 10521  | spans: API_ERROR | rationales: SKIPPED_DUE_TO_SPANS_ERROR
+
+Farsi - Maverick | M1 (Dynamic)
+  total excluded: 0
+
+Farsi - Mixtral | M1 (Dynamic)
+  total excluded: 9
+  text_id: 9643   | rationales: FORMAT_ERROR
+  text_id: 9724   | rationales: FORMAT_ERROR
+  text_id: 9763   | spans: API_ERROR | rationales: SKIPPED_DUE_TO_SPANS_ERROR
+  text_id: 9769   | severity: API_ERROR | spans: API_ERROR | rationales: SKIPPED_DUE_TO_SPANS_ERROR
+  text_id: 9782   | severity: API_ERROR
+  text_id: 9825   | spans: API_ERROR | rationales: SKIPPED_DUE_TO_SPANS_ERROR
+  text_id: 10249  | severity: API_ERROR
+  text_id: 10330  | severity: API_ERROR
+  text_id: 10508  | spans: API_ERROR | rationales: SKIPPED_DUE_TO_SPANS_ERROR
+
+Farsi - Maverick | A1 (Target-Inst)
+  total excluded: 0
+
+Farsi - Mixtral | A1 (Target-Inst)
+  total excluded: 3
+  text_id: 9626   | severity: API_ERROR | spans: API_ERROR | rationales: SKIPPED_DUE_TO_SPANS_ERROR
+  text_id: 9642   | rationales: FORMAT_ERROR
+  text_id: 10427  | rationales: FORMAT_ERROR
+
+Italian - Maverick | B0 (Zero-Shot)
+  total excluded: 55
+  note: all 55 exclusions are rationale-only API_ERROR (content refusal behavior)
+        documented as a finding in thesis Chapter 6, Section 6.4
+  text_id: 12314  | rationales: API_ERROR
+  text_id: 12321  | rationales: API_ERROR
+  text_id: 12322  | rationales: API_ERROR
+  text_id: 12367  | rationales: API_ERROR
+  text_id: 12371  | rationales: API_ERROR
+  text_id: 12375  | rationales: API_ERROR
+  text_id: 12392  | rationales: API_ERROR
+  text_id: 12395  | rationales: API_ERROR
+  text_id: 12412  | rationales: API_ERROR
+  text_id: 12417  | rationales: API_ERROR
+  text_id: 12456  | rationales: API_ERROR
+  text_id: 12469  | rationales: API_ERROR
+  text_id: 12471  | rationales: API_ERROR
+  text_id: 12544  | rationales: API_ERROR
+  text_id: 12584  | rationales: API_ERROR
+  text_id: 12590  | rationales: API_ERROR
+  text_id: 12610  | rationales: API_ERROR
+  text_id: 12634  | rationales: API_ERROR
+  text_id: 12656  | rationales: API_ERROR
+  text_id: 12668  | rationales: API_ERROR
+  text_id: 12673  | rationales: API_ERROR
+  text_id: 12759  | rationales: API_ERROR
+  text_id: 12777  | rationales: API_ERROR
+  text_id: 12789  | rationales: API_ERROR
+  text_id: 12793  | rationales: API_ERROR
+  text_id: 12839  | rationales: API_ERROR
+  text_id: 12854  | rationales: API_ERROR
+  text_id: 12877  | rationales: API_ERROR
+  text_id: 12885  | rationales: API_ERROR
+  text_id: 12912  | rationales: API_ERROR
+  text_id: 13005  | rationales: API_ERROR
+  text_id: 13057  | rationales: API_ERROR
+  text_id: 13084  | rationales: API_ERROR
+  text_id: 13111  | rationales: API_ERROR
+  text_id: 13137  | rationales: API_ERROR
+  text_id: 13141  | rationales: API_ERROR
+  text_id: 13171  | rationales: API_ERROR
+  text_id: 13183  | rationales: API_ERROR
+  text_id: 13197  | rationales: API_ERROR
+  text_id: 13202  | rationales: API_ERROR
+  text_id: 14374  | rationales: API_ERROR
+  text_id: 14380  | rationales: API_ERROR
+  text_id: 14429  | rationales: API_ERROR
+  text_id: 14440  | rationales: API_ERROR
+  text_id: 14487  | rationales: API_ERROR
+  text_id: 14529  | rationales: API_ERROR
+  text_id: 14575  | rationales: API_ERROR
+  text_id: 14576  | rationales: API_ERROR
+  text_id: 14592  | rationales: API_ERROR
+  text_id: 14611  | rationales: API_ERROR
+  text_id: 14613  | rationales: API_ERROR
+  text_id: 14654  | rationales: API_ERROR
+  text_id: 14662  | rationales: API_ERROR
+  text_id: 14708  | rationales: API_ERROR
+  text_id: 12802  | rationales: API_ERROR
+
+Italian - Mixtral | B0 (Zero-Shot)
+  total excluded: 1
+  text_id: 6767   | spans: FORMAT_ERROR | rationales: SKIPPED_DUE_TO_SPANS_ERROR
+
+Italian - Maverick | B1 (Static)
+  total excluded: 0
+
+Italian - Mixtral | B1 (Static)
+  total excluded: 1
+  text_id: 12783  | rationales: FORMAT_ERROR
+
+Italian - Maverick | M1 (Dynamic)
+  total excluded: 0
+
+Italian - Mixtral | M1 (Dynamic)
+  total excluded: 0
+
+Italian - Maverick | A1 (Target-Inst)
+  total excluded: 42
+  note: all 42 exclusions are rationale-only FORMAT_ERROR (content refusal behavior)
+        documented as a finding in thesis Chapter 6, Section 6.4
+  text_id: 12417  | rationales: FORMAT_ERROR
+  text_id: 12469  | rationales: FORMAT_ERROR
+  text_id: 12471  | rationales: FORMAT_ERROR
+  text_id: 12584  | rationales: FORMAT_ERROR
+  text_id: 12590  | rationales: FORMAT_ERROR
+  text_id: 12610  | rationales: FORMAT_ERROR
+  text_id: 12634  | rationales: FORMAT_ERROR
+  text_id: 12668  | rationales: FORMAT_ERROR
+  text_id: 12673  | rationales: FORMAT_ERROR
+  text_id: 12759  | rationales: FORMAT_ERROR
+  text_id: 12763  | rationales: FORMAT_ERROR
+  text_id: 12783  | rationales: FORMAT_ERROR
+  text_id: 12789  | rationales: FORMAT_ERROR
+  text_id: 12839  | rationales: FORMAT_ERROR
+  text_id: 12854  | rationales: FORMAT_ERROR
+  text_id: 12877  | rationales: FORMAT_ERROR
+  text_id: 12885  | rationales: FORMAT_ERROR
+  text_id: 12912  | rationales: FORMAT_ERROR
+  text_id: 13005  | rationales: FORMAT_ERROR
+  text_id: 13057  | rationales: FORMAT_ERROR
+  text_id: 13080  | rationales: FORMAT_ERROR
+  text_id: 13111  | rationales: FORMAT_ERROR
+  text_id: 13137  | rationales: FORMAT_ERROR
+  text_id: 13141  | rationales: FORMAT_ERROR
+  text_id: 13171  | rationales: FORMAT_ERROR
+  text_id: 13183  | rationales: FORMAT_ERROR
+  text_id: 13197  | rationales: FORMAT_ERROR
+  text_id: 14374  | rationales: FORMAT_ERROR
+  text_id: 14380  | rationales: FORMAT_ERROR
+  text_id: 14395  | rationales: FORMAT_ERROR
+  text_id: 14429  | rationales: FORMAT_ERROR
+  text_id: 14440  | rationales: FORMAT_ERROR
+  text_id: 14487  | rationales: FORMAT_ERROR
+  text_id: 14529  | rationales: FORMAT_ERROR
+  text_id: 14575  | rationales: FORMAT_ERROR
+  text_id: 14576  | rationales: FORMAT_ERROR
+  text_id: 14592  | rationales: FORMAT_ERROR
+  text_id: 14613  | rationales: FORMAT_ERROR
+  text_id: 14639  | rationales: FORMAT_ERROR
+  text_id: 14654  | rationales: FORMAT_ERROR
+  text_id: 14662  | rationales: FORMAT_ERROR
+  text_id: 14708  | rationales: FORMAT_ERROR
+
+Italian - Mixtral | A1 (Target-Inst)
+  total excluded: 1
+  text_id: 12221  | spans: API_ERROR | rationales: SKIPPED_DUE_TO_SPANS_ERROR
