@@ -1,8 +1,5 @@
-# Evaluation script for the Culturally Adaptive Retrieval-Based Framework
-# Computes severity classification (macro F1), span detection (overlap F1),
-# and rationale quality (BERTScore F1) across all conditions, models, and languages.
-# See thesis Chapter 6 for full description of evaluation methodology.
-#
+# Evaluation script which computes severity classification (macro F1), span detection (overlap F1), and rationale quality (BERTScore F1) across all conditions, models, and languages.
+# See thesis Chapter 5 and 6 of thesis for full description of evaluation methodology.
 # Requirements: pip install pandas numpy scikit-learn evaluate matplotlib seaborn
 # Set BASE_DIR to the folder containing your pipeline result CSVs before running.
 
