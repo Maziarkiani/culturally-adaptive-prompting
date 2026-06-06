@@ -2,7 +2,8 @@
 
 A retrieval-augmented in-context learning framework for culturally adaptive LLM assessment of multilingual information disorder. Developed as part of a Master's thesis in Language Technologies and Digital Humanities at the University of Turin (2026).
 
-The framework pairs task instructions with dynamically retrieved community-annotated exemplars through semantic similarity, enabling models to generate severity classifications, span detections, and rationale explanations that are more grounded in the cultural and linguistic context of the target community. It is evaluated across Farsi and Italian using LLaMA 4 Maverick and Mixtral-8x22B-Instruct on the [InDor corpus](https://github.com/dhfbk/InDor).
+What is it about?
+Extended a multilingual baseline study on the InDor corpus to investigate where current LLMs exhibit cultural blindness and produce culturally misaligned outputs in information disorder assessment. Designed and evaluated a retrieval-based in-context learning framework that connects model reasoning to community-annotated exemplars dynamically retrieved through semantic similarity at inference time. Evaluated across Persian (Farsi) and Italian using a combination of automated metrics and native-speaker human evaluation.
 
 ---
 
