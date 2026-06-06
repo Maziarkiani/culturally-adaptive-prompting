@@ -119,6 +119,8 @@ The human evaluation asked native speakers of Persian and Italian community to r
 
 This framework uses data from the InDor corpus, which was collected and annotated under an institutional ethics committee approval. All InDor annotator identifiers in the original files are numeric and the mapping to personal identities is held exclusively by the Aequa-Tech, srl. research consortium. Human evaluators in this study participated voluntarily and anonymously. No personal data was collected or stored. For full details see Chapter 7 of the thesis.
 
+The evaluation forms in `human_evaluation/` and the in-context examples used in the pipelines are drawn from the InDor corpus, which may contain content that is politically sensitive, offensive, or otherwise disturbing, including racist, sexist, or violent language. This material is included strictly for research transparency and reproducibility purposes.
+
 ---
 
 ## Citation
