@@ -1,13 +1,12 @@
 import os
 import re
 import time
-
 import pandas as pd
 import requests
 from google.colab import drive, userdata
 
 
-# you can switch this to mixtral, maverick, or any other model later
+# you can switch this to mixtral or any other model later
 MODEL_NAME = 'meta-llama/llama-4-maverick'
 LANGUAGE = 'fa'
 INPUT_CSV = 'fa_pilot_test.csv'
