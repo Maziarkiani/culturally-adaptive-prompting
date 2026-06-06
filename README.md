@@ -17,8 +17,7 @@ Extended a multilingual baseline study on the InDor corpus to investigate where 
 
 **Related papers:** 
 1) Thesis summary paper as an ongoing study, introducing the full framework: [arXiv:2603.27356](https://arxiv.org/abs/2603.27356). presented at the InDor26 Workshop, LREC-COLING 2026.
-2) Full thesis. An implication and results of this framework on a pilot test on Italian and Persian (Farsi) information disorder. To be made available in near future.
-
+2) Full thesis. Implementation and pilot evaluation of this framework on Italian and Persian (Farsi) information disorder. To be made available in the near future.
 ---
 
 ## Repository Structure
