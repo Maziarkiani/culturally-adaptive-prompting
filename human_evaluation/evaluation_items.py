@@ -1,8 +1,6 @@
 # Human evaluation item selection
-# Extracts paired and asymmetric rationale items from Maverick B1 and M1 results
-# for native speaker evaluation. Selection logic follows the criteria described
-# in thesis Chapter 6, Section 6.6.
-#
+# This code extracts paired and asymmetric rationale items from Maverick B1 and M1 results for the blind A/B test
+# Selection logic follows the criteria described in thesis Chapter 6, Section 6.6.
 # Requirements: pip install pandas
 # Set BASE_DIR to the folder containing your pipeline result CSVs before running.
 
@@ -63,8 +61,7 @@ def select_rationale_pair(row):
     """
     Selects one rationale from B1 and one from M1 for a given item.
     Rule 1: pick the pair with >= 30% span overlap between B1 and M1 spans.
-    Rule 2: if no cross-system overlap, pick rationales whose spans best
-            align with the gold reference spans (>= 30% threshold).
+    Rule 2: if no cross-system overlap, pick rationales whose spans best align with the gold reference spans (>= 30% threshold).
     Rule 3: fall back to the first available rationale in each condition.
     """
     spans_b1   = row['spans_list_B1']
