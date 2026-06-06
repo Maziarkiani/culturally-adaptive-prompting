@@ -126,7 +126,7 @@ This framework uses data from the InDor corpus, which was collected and annotate
 If you use this framework, the dataset landscape sheet, or the evaluation methodology, please cite the study proposal summary paper or the full thesis to be made publically available soon:
 
 ```bibtex
-@misc{mkj-culturaly-adaptive,
+@misc{jouneghani2026culturallyadaptiveexplainablellm,
   title         = {Culturally Adaptive Explainable {LLM} Assessment for Multilingual Information Disorder: A Human-in-the-Loop Approach},
   author        = {Kianimoghadam Jouneghani, Maziar},
   year          = {2026},
@@ -134,7 +134,7 @@ If you use this framework, the dataset landscape sheet, or the evaluation method
   archivePrefix = {arXiv},
   primaryClass  = {cs.CL},
   url           = {https://arxiv.org/abs/2603.27356},
-  note          = {Presented at the InDor Workshop, LREC-COLING 2026 (non-archival)}
+  note          = {Presented at the InDor26 Workshop, LREC-COLING 2026}
 }
 ```
 
