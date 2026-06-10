@@ -11,23 +11,21 @@ from google.colab import drive, userdata
 
 # config:
 # this file is the a1 farsi setup with retrieval plus target-language prompts
-# if you switch language later, also update the input file, bank path, and output file
 # if you switch model later, change the output name too so runs stay easy to track
 DATA_LANGUAGE = "fa"
 MODEL_NAME = "mistralai/mixtral-8x22b-instruct"
-TEST_CSV = f'{DATA_LANGUAGE}_pilot_test.csv'
-BANK_PKL = f'{DATA_LANGUAGE}_bge_m3_bank.pkl'
-OUTPUT_CSV = f'{DATA_LANGUAGE}_A1_mixtral_results.csv'
+TEST_CSV = f'/your_path/{DATA_LANGUAGE}_pilot_test.csv'
+BANK_PKL = f'/your_path/{DATA_LANGUAGE}_bge_m3_bank.pkl'
+OUTPUT_CSV = f'/your_path/{DATA_LANGUAGE}_A1_mixtral_results.csv'
 K_EXAMPLES = 4
 REQUEST_TIMEOUT = 120
 ROW_SLEEP_SECONDS = 1
 
 
-# keep the farsi system prompt exactly as in the original setup
 system_prompt_fa = "شما یک هوش مصنوعی سخت‌گیر برای قالب‌بندی داده‌ها هستید. شما باید فقط تگ‌های درخواست‌شده را برگردانید. از نوشتن متن‌های محاوره‌ای، احوال‌پرسی یا توضیحات اضافی خودداری کنید."
 
 
-# task 1: severity
+# task 1: severity template
 task_1_prompt_fa = """شما یک متخصص در حوزه چارچوب‌بندی، سوگیری زبانی و اختلال اطلاعات هستید.
 اختلال اطلاعات به معنای آلودگی فضای اطلاعاتی است که شامل سه دسته اصلی می‌شود: کژاطلاعات (اطلاعات نادرست و سهوی)، دروغ‌رسانی (اطلاعات نادرست و عمدی) و اطلاعات مغرضانه (اطلاعات واقعی با هدف آسیب‌رسانی). این موارد اغلب با دستکاری احساسی، بسترسازی فریبنده یا چارچوب‌بندی تحریف‌شده مشخص می‌شوند.
 وظیفه شما طبقه‌بندی شدت زبان مسئله‌دار در بخشی از یک مقاله خبری است.
@@ -51,10 +49,17 @@ task_1_prompt_fa = """شما یک متخصص در حوزه چارچوب‌بند
 <PREDICTED_LABEL>: moderately
 <PREDICTED_LABEL>: highly
 
-هیچ توضیح اضافی یا متن دیگری اضافه نکنید. فقط برچسب معتبر را برگردانید."""
+هیچ توضیح اضافی یا متن دیگری اضافه نکنید. فقط برچسب معتبر را برگردانید.
+
+{a1_dynamic_examples}
+
+{global_override_fa}
+
+اکنون ورودی زیر را پردازش کنید:
+{instance}"""
 
 
-# task 2: spans
+# task 2: spans template
 spans_task_prompt_fa = """شما یک متخصص در حوزه چارچوب‌بندی، سوگیری زبانی و اختلال اطلاعات هستید.
 اختلال اطلاعات به معنای آلودگی فضای اطلاعاتی است که شامل سه دسته اصلی می‌شود: کژاطلاعات (اطلاعات نادرست و سهوی)، دروغ‌رسانی (اطلاعات نادرست و عمدی) و اطلاعات مغرضانه (اطلاعات واقعی با هدف آسیب‌رسانی).
 این موارد اغلب با دستکاری احساسی، بسترسازی فریبنده یا چارچوب‌بندی تحریف‌شده مشخص می‌شوند.
@@ -77,10 +82,19 @@ spans_task_prompt_fa = """شما یک متخصص در حوزه چارچوب‌ب
 فرمت خروجی (دقیق):
 اگر یک بازه: <SPANS>: ["..."]
 اگر چند بازه: <SPANS>: ["...", "..."]
-اگر هیچ بازه‌ای نیست: <SPANS>: ["No"]"""
+اگر هیچ بازه‌ای نیست: <SPANS>: ["No"]
+
+{a1_dynamic_examples}
+
+{global_override_fa}
+
+اکنون ورودی زیر را پردازش کنید:
+{instance}
+
+پاسخ را فقط با یک بلوک <SPANS> برگردانید. بلوک‌های متعدد برنگردانید. بازه‌های تکراری ننویسید. هیچ توضیحی اضافه نکنید."""
 
 
-# task 3: rationales
+# task 3: rationales template
 rationales_task_prompt_fa = """شما یک متخصص در حوزه چارچوب‌بندی، سوگیری زبانی و اختلال اطلاعات هستید.
 اختلال اطلاعات به معنای آلودگی فضای اطلاعاتی است که شامل سه دسته اصلی می‌شود: کژاطلاعات (اطلاعات نادرست و سهوی)، دروغ‌رسانی (اطلاعات نادرست و عمدی) و اطلاعات مغرضانه (اطلاعات واقعی با هدف آسیب‌رسانی).
 این موارد اغلب با دستکاری احساسی، بسترسازی فریبنده یا چارچوب‌بندی تحریف‌شده مشخص می‌شوند.
@@ -101,11 +115,18 @@ rationales_task_prompt_fa = """شما یک متخصص در حوزه چارچوب
 - بازه‌ها را ترکیب نکنید.
 - دلیلی را جا نیندازید.
 - مطلقاً هیچ فرآیند فکری، پیش‌نویس یا اصلاح خودکاری نداشته باشید.
-- هیچ کلمه‌ای خارج از تگ‌ها ننویسید. فقط و فقط لیست نهایی را برگردانید."""
+- هیچ کلمه‌ای خارج از تگ‌ها ننویسید. فقط و فقط لیست نهایی را برگردانید.
+
+{a1_dynamic_examples}
+
+{global_override_fa}
+
+اکنون ورودی زیر را پردازش کنید:
+گزیده خبری: {instance}
+بازه‌ها: {spans}"""
 
 
-# keep the human-noise warning exactly as it was
-global_override_fa = """توجه مهم: مثال‌های ارائه‌شده مستقیماً از داده‌های انسانی استخراج شده‌اند و ممکن است بعضی از آنها دارای خطاهای نگارشی و قالب‌بندی باشند (مانند بازه‌های تکراری، هم‌خوانی نداشتن تعداد بازه‌ها و دلایل، عدم پیروی از قالب‌بندی پیشنهادی و وجود علائم اضافی مثل 0: و \n). این موارد صرفاً خطای انسانی هستند و نباید در خروجی شما تکرار شوند. در صورت مشاهده، از این موارد فقط برای یادگیری منطق سوگیری استفاده کنید و در پاسخ خود، دقیقاً از قالب استاندارد درخواست‌شده پیروی کنید."""
+global_override_fa = """توجه مهم: مثال‌های ارائه‌شده مستقیماً از داده‌های انسانی استخراج شده‌اند و ممکن است بعضی از آنها دارای خطاهای نگارشی و قالب‌بندی باشند (مانند بازه‌های تکراری، هم‌خوانی نداشتن تعداد بازه‌ها و دلایل، عدم پیروی از قالب‌بندی پیشنهادی و وجود علائم اضافی مثل 0: و \\n). این موارد صرفاً خطای انسانی هستند و نباید در خروجی شما تکرار شوند. در صورت مشاهده، از این موارد فقط برای یادگیری منطق سوگیری استفاده کنید و در پاسخ خود، دقیقاً از قالب استاندارد درخواست‌شده پیروی کنید."""
 
 
 # retry prompts
@@ -174,7 +195,6 @@ def call_llm(prompt_text, system_prompt, max_tokens, api_key):
         return f"API_ERROR: {str(e)}"
 
 
-# parsers stay the same
 def parse_severity(text):
     if text.startswith("API_ERROR") or text.startswith("FORMAT_ERROR"):
         return "API_ERROR"
@@ -196,7 +216,7 @@ def parse_rationales(text):
     return match.group(1).strip() if match else "FORMAT_ERROR"
 
 
-# build retrieval examples from the encoded bank
+# build retrieval examples dynamically from the encoded bank
 def build_dynamic_examples_string(query_emb, bank_embs, bank_df, k):
     search_results = util.semantic_search(query_emb, bank_embs, top_k=k)[0]
     examples_str = ""
@@ -240,7 +260,7 @@ def prepare_dataframe(test_csv, output_csv):
     return df
 
 
-# one row goes through retrieval first, then severity, then spans, then rationales
+# process single row with bypass and retry
 def process_row(row, api_key, retriever_model, device, bank_df, bank_embeddings):
     article_text = str(row['text'])
     retry_flag = False
@@ -259,27 +279,34 @@ def process_row(row, api_key, retriever_model, device, bank_df, bank_embeddings)
         K_EXAMPLES
     )
 
-    # task 1: severity
-    prompt_1 = f"{task_1_prompt_fa}\n\n{a1_dynamic_examples}\n{global_override_fa}\n\nاکنون ورودی زیر را پردازش کنید:\n{article_text}"
+    # task 1: severity classification
+    prompt_1 = task_1_prompt_fa.format(
+        instance=article_text,
+        a1_dynamic_examples=a1_dynamic_examples,
+        global_override_fa=global_override_fa
+    )
     sev_raw = call_llm(prompt_1, system_prompt_fa, 50, api_key)
     sev_parsed = parse_severity(sev_raw)
 
-    # if severity is none, skip spans and rationales
+    # downward short-circuit for "none" severity cases
     if sev_parsed == "none":
-        print("severity is 'none', so spans and rationales are skipped")
-        spans_raw = "SKIPPED_DUE_TO_NONE_SEVERITY"
+        print("severity evaluated as 'none'. short-circuiting downstream layers.")
+        spans_raw = "SHORT_CIRCUITED_DUE_TO_NONE_SEVERITY"
         spans_parsed = '["No"]'
-        rats_raw = "SKIPPED_DUE_TO_NONE_SEVERITY"
+        rats_raw = "SHORT_CIRCUITED_DUE_TO_NONE_SEVERITY"
         rats_parsed = '["No"]'
-
     else:
-        # task 2a: spans
-        prompt_2a = f"{spans_task_prompt_fa}\n\n{a1_dynamic_examples}\n{global_override_fa}\n\nاکنون ورودی زیر را پردازش کنید:\n{article_text}\n\nپاسخ را فقط با یک بلوک <SPANS> برگردانید. بلوک‌های متعدد برنگردانید. بازه‌های تکراری ننویسید. هیچ توضیحی اضافه نکنید."
+        # task 2a: spans extraction
+        prompt_2a = spans_task_prompt_fa.format(
+            instance=article_text,
+            a1_dynamic_examples=a1_dynamic_examples,
+            global_override_fa=global_override_fa
+        )
         spans_raw = call_llm(prompt_2a, system_prompt_fa, 300, api_key)
         spans_parsed = parse_spans(spans_raw)
 
-        if spans_parsed == "FORMAT_ERROR":
-            print("span format error, trying one retry")
+        if spans_parsed == "FORMAT_ERROR" and not spans_raw.startswith("API_ERROR"):
+            print("span format invalid. triggering retry protocol...")
             retry_flag = True
             prompt_retry = retry_spans_prompt_fa.format(instance=article_text)
             spans_raw_retry = call_llm(prompt_retry, system_prompt_fa, 300, api_key)
@@ -287,20 +314,27 @@ def process_row(row, api_key, retriever_model, device, bank_df, bank_embeddings)
             spans_parsed = parse_spans(spans_raw_retry)
             if spans_parsed == "FORMAT_ERROR":
                 spans_parsed = '["FORMAT_ERROR"]'
+            elif spans_raw.startswith("API_ERROR"):
+                spans_parsed = '["API_ERROR"]'
         elif spans_raw.startswith("API_ERROR"):
             spans_parsed = '["API_ERROR"]'
 
-        # task 2b: rationales
+        # task 2b: rationales generation
         if spans_parsed in ['["API_ERROR"]', '["FORMAT_ERROR"]']:
             rats_raw = "SKIPPED_DUE_TO_SPANS_ERROR"
             rats_parsed = "SKIPPED_DUE_TO_SPANS_ERROR"
         else:
-            prompt_2b = f"{rationales_task_prompt_fa}\n\n{a1_dynamic_examples}\n{global_override_fa}\n\nاکنون ورودی زیر را پردازش کنید:\nگزیده خبری: {article_text}\nبازه‌ها: {spans_parsed}"
+            prompt_2b = rationales_task_prompt_fa.format(
+                instance=article_text,
+                spans=spans_parsed,
+                a1_dynamic_examples=a1_dynamic_examples,
+                global_override_fa=global_override_fa
+            )
             rats_raw = call_llm(prompt_2b, system_prompt_fa, 800, api_key)
             rats_parsed = parse_rationales(rats_raw)
 
-            if rats_parsed == "FORMAT_ERROR":
-                print("rationale format error, trying one retry")
+            if rats_parsed == "FORMAT_ERROR" and not rats_raw.startswith("API_ERROR"):
+                print("rationale format invalid. triggering retry protocol...")
                 retry_flag = True
                 prompt_retry_rat = retry_rationales_prompt_fa.format(instance=article_text, spans=spans_parsed)
                 rats_raw_retry = call_llm(prompt_retry_rat, system_prompt_fa, 800, api_key)
@@ -308,8 +342,10 @@ def process_row(row, api_key, retriever_model, device, bank_df, bank_embeddings)
                 rats_parsed = parse_rationales(rats_raw_retry)
                 if rats_parsed == "FORMAT_ERROR":
                     rats_parsed = '["FORMAT_ERROR"]'
-            elif rats_raw.startswith("API_ERROR") or rats_raw.startswith("FORMAT_ERROR"):
-                rats_parsed = "FORMAT_ERROR"
+                elif rats_raw.startswith("API_ERROR"):
+                    rats_parsed = '["API_ERROR"]'
+            elif rats_raw.startswith("API_ERROR"):
+                rats_parsed = '["API_ERROR"]'
 
     return {
         'severity_raw': sev_raw,
