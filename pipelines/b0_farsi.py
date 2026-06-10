@@ -125,7 +125,6 @@ def load_api_key():
     return api_key
 
 
-# clean and safe api call function matching original generation params
 def call_llm(prompt_text, system_prompt, max_tokens, api_key):
     payload = {
         "model": MODEL_NAME,
@@ -163,7 +162,6 @@ def call_llm(prompt_text, system_prompt, max_tokens, api_key):
         return f"API_ERROR: {str(e)}"
 
 
-# greedy regex parsers matching original code tags
 def parse_severity(text):
     if text.startswith("API_ERROR") or text.startswith("FORMAT_ERROR"):
         return "API_ERROR"
