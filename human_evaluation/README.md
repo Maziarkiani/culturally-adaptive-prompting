@@ -2,7 +2,8 @@
 
 This folder covers the native-speaker evaluation from Chapter 6, Section 6.6: how items were selected for the blind A/B test, and how the Google Form responses were turned into the numbers reported in the thesis.
 
-**WARNING:** The evaluation forms below contain in-context examples drawn from the InDor corpus, which may include content that is politically sensitive, offensive, or otherwise disturbing, including racist, sexist, or violent language. This material is presented strictly for research transparency and reproducibility.
+> [!WARNING]
+> The evaluation forms below contain in-context examples drawn from the InDor corpus, which may include content that is politically sensitive, offensive, or otherwise disturbing, including racist, sexist, or violent language. This material is presented strictly for research transparency and reproducibility.
 
 ---
 
