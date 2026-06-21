@@ -4,9 +4,11 @@ A retrieval-augmented in-context learning framework for culturally adaptive LLM 
 
 ## What's this about?
 
-Information disorder doesn't look the same everywhere. The same manipulative framing that's obvious to a native speaker can slip right past a model trained mostly on English data, and explanations generated for non-English content often miss the cultural context that actually makes something problematic.
+Information disorder doesn't look the same everywhere. The same manipulative framing that's obvious to a native speaker can slip right past a model trained mostly on English data, a problem this thesis calls *cultural blindness*. And even when a model does flag something as problematic, the explanation it gives often doesn't reflect how the target community actually reasons about it, what the thesis calls *culturally misaligned rationales*.
 
-This project starts from a multilingual baseline study on the InDor corpus to map out exactly where current LLMs run into this problem, then builds a retrieval-based framework on top of it: instead of relying on the model's own (often English-centric) reasoning, the framework retrieves community-annotated, human-written exemplars at inference time and grounds the model's output in them. Everything is evaluated on Persian (Farsi) and Italian, using a mix of automated metrics and native-speaker human evaluation, because automated scores alone don't tell you whether a rationale actually feels right to the people the content affects.
+This project starts from a multilingual baseline study on the InDor corpus, where evaluation of LLaMA 4 Maverick and Mixtral-8x22B-Instruct under zero-shot and static few-shot prompting showed exactly these limitations. A fixed set of few-shot examples just can't cover the thematic and cultural range of content these models are asked to assess. So the framework built here goes one step further: instead of a static prompt, it builds a community-annotated Exemplar Bank per language, encodes it with the multilingual retrieval model BGE-M3, and dynamically retrieves the most semantically relevant human-written exemplars for each unseen article at inference time. The model's reasoning gets grounded in real community annotations that actually match the content in front of it, not a fixed handful of examples picked in advance.
+
+Everything is evaluated on Persian (Farsi) and Italian, using a mix of automated metrics (severity F1, span overlap, rationale BERTScore) and native-speaker human evaluation, because automated scores alone don't tell you whether a rationale actually feels right to the people the content affects.
 
 ---
 
