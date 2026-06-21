@@ -34,7 +34,7 @@ For Stratum 1, it reshapes the form responses into a long format (one row per ev
 
 For Stratum 2, it checks each evaluator's answer against the expected validation response and reports how often each setup's detection was confirmed by native speakers.
 
-This script expects two files per language that aren't included in the repo for privacy reasons: the mapping CSV from `rationale_extraction.py`, and the raw form responses exported from Google Sheets. See the note in the script header for the expected column layout.
+This script expects two files per language that aren't included in the repo: the mapping CSV from `rationale_extraction.py`, and the raw form responses exported from Google Sheets. See the note in the script header for the expected column layout.
 
 **To run it:** set `BASE_DIR` to the folder with your mapping and form response files, then:
 ```bash
@@ -52,5 +52,5 @@ These are the actual Google Forms shown to evaluators, exported as PDF, with the
 ## Notes
 
 - 7 native speakers per language participated.
-- Raw form responses are not published here to protect evaluator privacy. Only the blank forms above are included.
+- Raw form responses are not published here. Only the blank forms above are included.
 - See Chapter 6, Section 6.6 for the full rubric and procedure.
