@@ -50,6 +50,8 @@ A full log of every row dropped from evaluation, broken down by language, model,
 
 One thing worth flagging explicitly here since it matters for interpreting Chapter 6: the Italian Maverick B0 and A1 exclusions are not the same kind of error as everything else in this file. Diagnostic work (documented in Chapter 6, Section 6.4 and Chapter 7, Section 7.2.2) confirmed these were genuine model content refusals at the rationale generation step, not infrastructure failures. The model received the prompt, processed it, and returned an empty body for specific sensitive topics. Earlier pipeline runs logged this inconsistently as either API_ERROR or FORMAT_ERROR depending on the run; both are unified here as FORMAT_ERROR for clarity, but they refer to the same underlying refusal behavior. Every other exclusion in this file, the scattered Farsi Mixtral ones especially, is a normal transient pipeline issue (API timeout, malformed JSON, etc.) and was confirmed as such through item-by-item review.
 
+This pattern is treated in the thesis as a methodological finding in its own right rather than a bug to fix: it points to a broader question about how safety alignment in commercial LLMs intersects with legitimate analytical tasks on sensitive topics, an effect that likely extends beyond this specific pipeline and could be worth studying more systematically across other information disorder or content-moderation contexts. See Chapter 6 and Chapter 7 for the full diagnostic and discussion.
+
 ---
 
 ## Notes
