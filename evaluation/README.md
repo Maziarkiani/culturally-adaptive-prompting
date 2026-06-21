@@ -10,8 +10,8 @@ Runs the full automated evaluation across all 16 conditions, that's 4 prompting 
 
 **What it computes, per condition:**
 - **Severity classification.** Macro F1 across the four severity labels (none/slightly/moderately/highly). Macro averaging matters here because the label distribution is skewed toward "none," and macro F1 stops the majority class from hiding how the model does on the rarer, more interesting classes.
-- **Span detection.** Token-overlap F1, computed with best-match pairing between predicted and gold spans rather than strict positional matching. This is intentionally more forgiving than exact match; the model just needs to land on roughly the right region of text, not character-perfect boundaries.
-- **Rationale quality.** BERTScore F1 against the human-written reference rationale, computed only on items that actually have a gold rationale (i.e. items annotators flagged as problematic).
+- **Span detection.** Token-overlap F1, computed with best-match pairing between predicted and human-reference spans rather than strict positional matching. This is intentionally more forgiving than exact match; the model just needs to land on roughly the right region of text, not character-perfect boundaries.
+- **Rationale quality.** BERTScore F1 against the human-written reference rationale, computed only on items that actually have a human-reference rationale (i.e. items annotators flagged as problematic).
 
 Before any of this happens, every row gets checked against a list of pipeline error tokens (FORMAT_ERROR, API_ERROR, SKIPPED_DUE_TO_SPANS_ERROR, and a few legacy variants from earlier pipeline runs). If a row has an error in any of the three output columns, the whole row is dropped from evaluation, not just from the metric where it failed. This keeps all three scores comparable on the exact same item set.
 
