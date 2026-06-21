@@ -15,7 +15,7 @@ Runs eight cleaning steps in sequence on the raw `indor_it.jsonl` and `indor_fa.
 | 3 | Remove Problematic items missing spans, span labels, or rationales | -297 | -10 |
 | 4 | Remove None items that have spans or rationales attached (shouldn't happen, but it does) | -52 | -86 |
 | 5 | Remove Problematic items whose rationale was written in English instead of the target language, detected with `langdetect` | -12 | -56 |
-| 6 | Exclude articles where one annotator said None and another said Problematic (huge respect for perpectivist NLP, but I could't keep diagreement for this framework, read the limitations in chapter 7 please.) | -384 | -575 |
+| 6 | Exclude articles where one annotator said None and another said Problematic (huge respect for perspectivist NLP, but I could't keep diagreement for this framework, read the limitations in chapter 7 please.) | -384 | -575 |
 | 7 | Deduplicate to one annotation per article, keeping the longest rationale when there's a choice | -473 | -309 |
 | 8 | Final integrity check: language detection on the article body itself, plus a duplicate-text check, to catch wrong-language articles and repeated texts that slipped through everything else | -55 | n/a |
 | | **Clean pool** | **991** | **557** |
