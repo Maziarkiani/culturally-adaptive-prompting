@@ -6,9 +6,9 @@ A retrieval-augmented in-context learning framework for culturally adaptive LLM 
 
 Information disorder doesn't look the same everywhere. The same manipulative framing that's obvious to a native speaker can slip right past a model trained mostly on English data, a problem this thesis calls *cultural blindness*. And even when a model does flag something as problematic, the explanation it gives often doesn't reflect how the target community actually reasons about it, what the thesis calls *culturally misaligned rationales*.
 
-This project starts from a multilingual baseline study on the InDor corpus, where evaluation of LLaMA 4 Maverick and Mixtral-8x22B-Instruct under zero-shot and static few-shot prompting showed exactly these limitations. A fixed set of few-shot examples just can't cover the thematic and cultural range of content these models are asked to assess. So the framework built here goes one step further: instead of a static prompt, it builds a community-annotated Exemplar Bank per language, encodes it with the multilingual retrieval model BGE-M3, and dynamically retrieves the most semantically relevant human-written exemplars for each unseen article at inference time. The model's reasoning gets grounded in real community annotations that actually match the content in front of it, not a fixed handful of examples picked in advance.
+This project starts from a multilingual baseline study on the [InDor corpus](https://lrec.elra.info/lrec2026-main-515), where evaluation of two MoE LLMs under zero-shot and static few-shot prompting showed exactly these limitations. A fixed set of few-shot examples just can't cover the thematic and cultural range of content these models are asked to assess. So the framework built here goes one step further: instead of a static prompt, it builds a community-annotated Exemplar Bank per language, encodes it with the multilingual retrieval model BGE-M3, and dynamically retrieves the most semantically similar items with human-written rationales for each unseen article at inference time. The aim is to align model's reasoning more deeply in real community reasoning and explanations on manipulative content.
 
-Everything is evaluated on Persian (Farsi) and Italian, using a mix of automated metrics (severity F1, span overlap, rationale BERTScore) and native-speaker human evaluation, because automated scores alone don't tell you whether a rationale actually feels right to the people the content affects.
+Everything is evaluated on Persian (Farsi) and Italian, using a mix of automated metrics (severity F1, span overlap F1, rationale BERTScore F1) and native-speaker human evaluation on the rationales.
 
 ---
 
@@ -61,7 +61,7 @@ culturally-adaptive-prompting/
     └── dataset_landscape.csv  # curated review of 108 information disorder datasets
 ```
 
-Each folder has its own README going into more detail on what each script does and how it maps to the thesis chapters, so this top-level one stays focused on the big picture.
+Each folder has its own README going into more detail on what each folder has and how it maps to the thesis chapters.
 
 ---
 
@@ -113,7 +113,7 @@ Run things in this order:
 
 ## Human Evaluation
 
-Native speakers of Persian and Italian rated rationale pairs from B1 and M1 on a 1-4 scale of cultural appropriateness in a blind A/B test, and separately validated cases where only one condition detected a problem. Seven evaluators took part per language. The forms themselves, including the rationales and news text shown to evaluators, are included as PDFs in `human_evaluation/`. Raw form responses aren't published to protect evaluator privacy. See `human_evaluation/README.md` for the full breakdown.
+Native speakers of Persian and Italian rated rationale pairs from B1 and M1 on a 1-4 scale of cultural appropriateness in a blind A/B test, and separately validated cases where only one condition detected a problem. Seven evaluators took part per language. The forms themselves, including the rationales and news text shown to evaluators, are included as PDFs in `human_evaluation/`. See `human_evaluation/README.md` for the full breakdown.
 
 ---
 
@@ -127,7 +127,7 @@ Native speakers of Persian and Italian rated rationale pairs from B1 and M1 on a
 
 This framework uses data from the InDor corpus, collected and annotated under institutional ethics committee approval. All InDor annotator identifiers in the original files are numeric, and the mapping to personal identities is held exclusively by the Aequa-Tech srl research consortium. Human evaluators in this study took part voluntarily and anonymously, and no personal data was collected or stored. Full details are in Chapter 7 of the thesis.
 
-Worth flagging directly: the evaluation forms in `human_evaluation/` and the in-context examples used throughout the pipelines are drawn from the InDor corpus, which can contain content that's politically sensitive, offensive, or otherwise disturbing, including racist, sexist, or violent language. This is included strictly for research transparency and reproducibility, not because the content itself is being endorsed in any way.
+Worth flagging directly: the evaluation forms in `human_evaluation/` and the in-context examples used throughout the pipelines are drawn from the InDor corpus, which can contain content that's politically sensitive, offensive, or otherwise disturbing, including racist, sexist, or violent language. This is included strictly for research transparency and reproducibility.
 
 ---
 
