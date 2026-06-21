@@ -13,12 +13,12 @@ A curated review of 108 publicly available or documented fake news and informati
 - `Has Rationales?` — whether it includes any form of natural-language explanation or rationale
 - `Includes True News?` — whether the dataset includes genuine, non-manipulative content alongside the problematic examples, or only the latter
 - `Year` — publication year, where available
-- `Accesibility` — public, request-based, or otherwise restricted
+- `Accesibility` — public or private
 - `Link` — source URL
 
 **Why this exists:** the main finding driving Chapter 2's argument is that almost none of the existing datasets in this space combine multilingual coverage with explanation-oriented annotations. The numbers back this up directly: only 7 of the 108 datasets include span annotations, and only 10 include any form of rationale. 63 are English-only. This sheet is the evidence behind that claim, and it's released as a standalone resource so other researchers don't have to redo this search from scratch.
 
-**A caveat worth keeping in mind:** dataset characteristics here were compiled from published papers, repository documentation, and available web resources. Where direct access to a dataset wasn't possible, details were inferred from published descriptions, so minor inconsistencies may exist. Some datasets are listed as private or restricted, but their characteristics (modality, language, spans, rationales, etc.) are still documented here based on what the originating paper or repository describes publicly, even if the data itself wasn't directly inspected. A number of datasets marked as accessible are only accessible by contacting the original authors or data provider directly (commonly by email) rather than through an open download link, so "Public" or "Accessible" here doesn't always mean instantly downloadable.
+**A caveat worth keeping in mind:** dataset characteristics here were compiled from published papers, repository documentation, and available web resources. Where direct access to a dataset wasn't possible, details were inferred from published descriptions, so minor inconsistencies may exist. Some datasets are listed as private or restricted, but their characteristics (modality, language, spans, rationales, etc.) are still documented here based on what the originating paper or repository describes publicly, even if the data itself wasn't directly inspected. A number of datasets are only accessible by contacting the original authors or data provider directly (commonly by email) rather than through an open download link, so "Public" or "Private" here doesn't always mean instantly downloadable.
 
 Links were verified at the time of compilation, but dataset hosting changes over time: repositories get moved, renamed, taken down, or restructured by their original maintainers. This sheet reflects the state of each resource as found during this review and is not continuously maintained against upstream changes.
 
