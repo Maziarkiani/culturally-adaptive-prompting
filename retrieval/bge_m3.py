@@ -6,7 +6,7 @@ from google.colab import drive
 
 
 # config:
-# this script builds the bge-m3 retrieval banks used by the a1 pipelines
+# this script builds the bge-m3 retrieval banks used by the a1 and m1 pipelines
 # each csv is encoded from the text column and saved as a pickle file
 # change the paths to your specific input and output file paths
 FA_INPUT_CSV = 'fa_exemplar_bank.csv'
