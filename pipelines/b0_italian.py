@@ -18,7 +18,7 @@ ROW_SLEEP_SECONDS = 1
 # keep the system prompt strict so the model only returns the needed format
 system_prompt_it = "Sei un'IA rigorosa per la formattazione dei dati. DEVI restituire SOLO i tag richiesti. Non includere riempitivi conversazionali, saluti o spiegazioni."
 
-# task 1: severity classification (original tags fully restored)
+# task 1: severity classification
 task_1_prompt_zero_shot_it = """Sei un esperto di framing, bias linguistici e Disordine dell'Informazione.
 Il disordine dell'informazione è l'inquinamento dello spazio informativo che include misinformazione, disinformazione e malinformazione. È spesso caratterizzato da manipolazione emotiva, falsi contesti o framing distorto.
 Il tuo compito è classificare la gravità del linguaggio problematico in un estratto di un articolo di notizie.
@@ -133,7 +133,6 @@ def load_api_key():
     return api_key
 
 
-# clean and safe api call function matching original generation params
 def call_llm(prompt_text, system_prompt, max_tokens, api_key):
     payload = {
         "model": MODEL_NAME,
