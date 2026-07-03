@@ -117,7 +117,6 @@ Ora elabora il seguente input:
 Estratto di notizia: {instance}
 Span: {spans}"""
 
-# few-shot examples block matching original annotations
 b1_examples_it = """
 --- Esempio 0 (NONE) ---
 TITLE: N/A
