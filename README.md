@@ -20,10 +20,6 @@ Everything is evaluated on Persian (Farsi) and Italian, using a mix of automated
 
 **Institution:** University of Turin
 
-**Related papers:**
-1. Thesis summary paper, presenting the framework as an ongoing study: [arXiv:2603.27356](https://arxiv.org/abs/2603.27356). Presented at the InDor26 Workshop, LREC-COLING 2026.
-2. Full thesis, with the complete implementation and pilot evaluation on Italian and Persian (Farsi) information disorder. To be made available soon.
-
 ---
 
 ## Repository Structure
@@ -133,7 +129,23 @@ Worth flagging directly: the evaluation forms in `human_evaluation/` and the in-
 
 ## Citation
 
-If you use this framework, the dataset landscape sheet, or the evaluation methodology, please cite the study proposal summary paper for now; the full thesis citation will be added once it's publicly available:
+If you use the code in this repository, the dataset landscape sheet, the full evaluation methodology, or the experimental results, please cite the **full Master's thesis**:
+
+```bibtex
+@mastersthesis{kianimoghadam2026culturally,
+  title   = {Culturally Adaptive Explainable LLM Assessment for Multilingual Information Disorder},
+  author  = {Kianimoghadam Jouneghani, Maziar},
+  year    = {2026},
+  school  = {University of Turin},
+  type    = {Master's thesis},
+  address = {Turin, Italy},
+  note    = {Advisors: Viviana Patti and Marco Antonio Stranisci. 
+             UniTesi handle: [https://hdl.handle.net/20.500.14240/192055](https://hdl.handle.net/20.500.14240/192055)},
+  url     = {[https://maziarkiani.github.io/uploads/thesis.pdf](https://maziarkiani.github.io/uploads/thesis.pdf)}
+}
+```
+
+If you are specifically referencing the early study proposal or the core conceptual framework, please cite the workshop paper (Accepted and presented at the InDor26 Workshop, LREC-COLING 2026 as an ongoing study paper):
 
 ```bibtex
 @misc{jouneghani2026culturallyadaptiveexplainablellm,
