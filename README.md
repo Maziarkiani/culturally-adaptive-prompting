@@ -140,8 +140,8 @@ If you use the code in this repository, the dataset landscape sheet, the full ev
   type    = {Master's thesis},
   address = {Turin, Italy},
   note    = {Advisors: Viviana Patti and Marco Antonio Stranisci. 
-             UniTesi handle: [https://hdl.handle.net/20.500.14240/192055](https://hdl.handle.net/20.500.14240/192055)},
-  url     = {[https://maziarkiani.github.io/uploads/thesis.pdf](https://maziarkiani.github.io/uploads/thesis.pdf)}
+             UniTesi handle: https://hdl.handle.net/20.500.14240/192055},
+  url     = {https://maziarkiani.github.io/uploads/thesis.pdf}
 }
 ```
 
