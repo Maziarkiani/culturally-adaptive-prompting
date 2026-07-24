@@ -20,6 +20,10 @@ Everything is evaluated on Persian (Farsi) and Italian, using a mix of automated
 
 **Institution:** University of Turin
 
+**Supervisors:** Prof. Viviana Patti and [Dr. Marco Antonio Stranisci](https://marcostranisci.github.io/)
+
+**Link:** [maziarkiani.github.io](https://maziarkiani.github.io/publications/thesis-2026/)
+
 ---
 
 ## Repository Structure
