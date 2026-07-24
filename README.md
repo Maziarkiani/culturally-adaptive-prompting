@@ -6,7 +6,7 @@ A retrieval-augmented in-context learning framework for culturally adaptive LLM 
 
 Information disorder doesn't look the same everywhere. The same manipulative framing that's obvious to a native speaker can slip right past a model trained mostly on English data, a problem this thesis calls *cultural blindness*. And even when a model does flag something as problematic, the explanation it gives often doesn't reflect how the target community actually reasons about it, what the thesis calls *culturally misaligned rationales*.
 
-This project starts from a multilingual baseline study on the [InDor corpus](https://lrec.elra.info/lrec2026-main-515), where evaluation of two MoE LLMs under zero-shot and static few-shot prompting showed exactly these limitations. A fixed set of few-shot examples just can't cover the thematic and cultural range of content these models are asked to assess. So the framework built here goes one step further: instead of a static prompt, it builds a community-annotated Exemplar Bank per language, encodes it with the multilingual retrieval model BGE-M3, and dynamically retrieves the most semantically similar items with human-written rationales for each unseen article at inference time. The aim is to align model's reasoning more deeply in real community reasoning and explanations on manipulative content.
+This project starts from a multilingual baseline study on the <a href="https://lrec.elra.info/lrec2026-main-515" target="_blank" rel="noopener">InDor corpus</a>, where evaluation of two MoE LLMs under zero-shot and static few-shot prompting showed exactly these limitations. A fixed set of few-shot examples just can't cover the thematic and cultural range of content these models are asked to assess. So the framework built here goes one step further: instead of a static prompt, it builds a community-annotated Exemplar Bank per language, encodes it with the multilingual retrieval model BGE-M3, and dynamically retrieves the most semantically similar items with human-written rationales for each unseen article at inference time. The aim is to align model's reasoning more deeply in real community reasoning and explanations on manipulative content.
 
 Everything is evaluated on Persian (Farsi) and Italian, using a mix of automated metrics (severity F1, span overlap F1, rationale BERTScore F1) and native-speaker human evaluation on the rationales.
 
@@ -20,9 +20,9 @@ Everything is evaluated on Persian (Farsi) and Italian, using a mix of automated
 
 **Institution:** University of Turin
 
-**Supervisors:** Prof. Viviana Patti and [Dr. Marco Antonio Stranisci](https://marcostranisci.github.io/)
+**Supervisors:** Prof. Viviana Patti and <a href="https://marcostranisci.github.io/" target="_blank" rel="noopener">Dr. Marco Antonio Stranisci</a>
 
-**Link:** [maziarkiani.github.io](https://maziarkiani.github.io/publications/thesis-2026/)
+**Link:** <a href="https://maziarkiani.github.io/publications/thesis-2026/" target="_blank" rel="noopener">Thesis page</a>
 
 ---
 
@@ -81,7 +81,7 @@ pip install -r requirements.txt
 
 ### Input Data
 
-This framework is built on the [InDor corpus](https://lrec.elra.info/lrec2026-main-515). You'll need the raw Italian and Farsi JSONL files (`indor_it.jsonl`, `indor_fa.jsonl`) placed in a `data/` folder before running the cleaning pipeline.
+This framework is built on the <a href="https://lrec.elra.info/lrec2026-main-515" target="_blank" rel="noopener">InDor corpus</a>. You'll need the raw Italian and Farsi JSONL files (`indor_it.jsonl`, `indor_fa.jsonl`) placed in a `data/` folder before running the cleaning pipeline.
 
 Pipeline result CSVs and human evaluation form responses aren't included in this repository for size and privacy reasons. Check the README in each folder for the expected file naming convention if you're plugging in your own data.
 
@@ -170,7 +170,7 @@ If you are specifically referencing the early study proposal or the core concept
 
 Found an issue with the code, the dataset landscape sheet, or anything else here? Feel free to open an issue or reach out directly. Feedback and contributions are genuinely welcome.
 
-**Website:** [maziarkiani.github.io](https://maziarkiani.github.io)
+**Website:** <a href="https://maziarkiani.github.io" target="_blank" rel="noopener">maziarkiani.github.io</a>
 
 ---
 
