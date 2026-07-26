@@ -24,6 +24,9 @@ Everything is evaluated on Persian (Farsi) and Italian, using a mix of automated
 
 **Link:** <a href="https://maziarkiani.github.io/publications/thesis-2026/" target="_blank" rel="noopener">Thesis page</a>
 
+**Link:** <a href="https://maziarkiani.github.io/uploads/thesis.pdf" target="_blank" rel="noopener">Thesis file</a>
+
+
 ---
 
 ## Repository Structure
